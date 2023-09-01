@@ -20,10 +20,10 @@ function Company() {
       <article
         className={`${screenStyle} grid grid-cols-2 last:col-span-2 gap-3`}
       >
-        {companies.map((aapl) => (
-          <Link className="last:col-span-2" to="/" key={aapl.id}>
+        {companies.map((company) => (
+          <Link className="last:col-span-2" to="/" key={company.id}>
             <button className={`${buttonStyle} w-full`} type="button">
-              {aapl.calendarYear}
+              {company.calendarYear}
             </button>
           </Link>
         ))}
