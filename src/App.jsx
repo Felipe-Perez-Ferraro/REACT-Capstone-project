@@ -1,8 +1,8 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import './App.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Company from './components/Company';
+import YearInfo from './components/YearInfo';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +20,15 @@ const router = createBrowserRouter([
       <>
         <Navbar />
         <Company />
+      </>
+    ),
+  },
+  {
+    path: '/insights/:symbol/:id',
+    element: (
+      <>
+        <Navbar />
+        <YearInfo />
       </>
     ),
   },
