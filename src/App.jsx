@@ -1,16 +1,32 @@
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Company from './components/Company';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: (
+      <>
+        <Navbar />
+        <Home />
+      </>
+    ),
+  },
+  {
+    path: '/company/:symbol',
+    element: (
+      <>
+        <Navbar />
+        <Company />
+      </>
+    ),
+  },
+]);
 
 function App() {
-  const str = 'Hello';
-
-  return (
-    <div className="text-left">
-      <h1>
-        Hello
-        {str}
-      </h1>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
