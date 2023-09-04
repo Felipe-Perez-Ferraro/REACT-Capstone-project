@@ -33,7 +33,7 @@ function YearInfo() {
         )}
         {!isLoading && (
           <>
-            <Link className="text-slate-100 font-semibold pb-3 text-left" to={`/company/${symbol}`}>
+            <Link className="text-slate-100 font-semibold mb-2 text-left whitespace-nowrap inline w-3" to={`/company/${symbol}`}>
               {goBack}
               {' '}
               Back to years
