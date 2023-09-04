@@ -1,4 +1,4 @@
-const apiKey = '04ecc2840ecc44887bf18fa4b6327d8e';
+const apiKey = '9bdf2f9051dd1e2a942f6a776cfd57a2';
 
 const fetchApi = async (symbol) => {
   try {
