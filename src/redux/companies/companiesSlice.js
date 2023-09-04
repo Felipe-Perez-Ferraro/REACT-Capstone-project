@@ -4,6 +4,8 @@ import fetchApi from '../../services/api';
 const initialState = {
   companies: [],
   isFetched: false,
+  isLoading: false,
+  error: false,
 };
 
 export const fetchCompaniesThunk = createAsyncThunk(
@@ -31,9 +33,21 @@ const companiesSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
+    builder.addCase(fetchCompaniesThunk.pending, (state) => {
+      state.isFetched = false;
+      state.isLoading = true;
+      state.error = false;
+    });
     builder.addCase(fetchCompaniesThunk.fulfilled, (state, action) => {
       state.companies = action.payload;
       state.isFetched = true;
+      state.isLoading = false;
+      state.error = false;
+    });
+    builder.addCase(fetchCompaniesThunk.rejected, (state, action) => {
+      state.isFetched = false;
+      state.isLoading = false;
+      state.error = action.error.message;
     });
   },
 });
