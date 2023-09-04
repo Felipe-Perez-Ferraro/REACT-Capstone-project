@@ -1,6 +1,10 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMicrophone, faAngleLeft, faGear } from '@fortawesome/free-solid-svg-icons';
+import {
+  faMicrophone,
+  faAngleLeft,
+  faGear,
+} from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { screenStyle } from '../tailwindStyles';
 

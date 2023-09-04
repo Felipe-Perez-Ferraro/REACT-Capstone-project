@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import companiesreducer from './apple/companiesSlice';
+import companiesreducer from './companies/companiesSlice';
 
 const store = configureStore({
   reducer: {
