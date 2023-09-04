@@ -144,7 +144,7 @@ If you like this project, don't forget to give it a star on GitHub! Your support
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank the brilliant team at SpaceX for their open API and for their inspiring work on pushing the boundaries of space travel. The ingenuity and dedication they exhibit in their missions have been the cornerstone of our project. I'd also like to acknowledge the countless developers and contributors in the open-source community whose code snippets, libraries, and guidance have made Space Travelers Hub possible.
+I would like to give credit to Nelson Sakwa the author of the original design you used.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
