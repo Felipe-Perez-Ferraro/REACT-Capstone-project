@@ -12,8 +12,9 @@ function Company() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchCompaniesThunk(symbolSelected.symbol));
-  }, [fetchCompaniesThunk, symbolSelected.symbol]);
+    const symbolToFetch = symbolSelected.symbol;
+    dispatch(fetchCompaniesThunk(symbolToFetch));
+  }, [fetchCompaniesThunk]);
 
   return (
     <section className="section bg-pink-900 py-7">
