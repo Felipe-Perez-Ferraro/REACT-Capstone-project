@@ -4,6 +4,7 @@ import {
   faMicrophone,
   faAngleLeft,
   faGear,
+  faMagnifyingGlass,
 } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { screenStyle } from '../tailwindStyles';
@@ -11,6 +12,7 @@ import { screenStyle } from '../tailwindStyles';
 const goBack = <FontAwesomeIcon icon={faAngleLeft} />;
 const user = <FontAwesomeIcon icon={faMicrophone} />;
 const settings = <FontAwesomeIcon icon={faGear} />;
+const search = <FontAwesomeIcon icon={faMagnifyingGlass} />;
 
 function Navbar() {
   return (
@@ -25,6 +27,7 @@ function Navbar() {
             <div className="flex gap-3">
               <p className="text-white text-lg">{user}</p>
               <p className="text-white text-lg">{settings}</p>
+              <p className="text-white text-lg">{search}</p>
             </div>
           </li>
         </ul>
