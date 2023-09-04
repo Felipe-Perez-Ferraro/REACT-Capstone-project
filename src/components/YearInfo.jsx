@@ -12,11 +12,14 @@ function YearInfo() {
   const { id } = useParams();
   const { symbol } = useParams();
   const { companies } = useSelector((state) => state.companies);
+  const { isFetched } = useSelector((state) => state.companies);
   const yearSelected = companies.find((company) => company.id === id);
 
   useEffect(() => {
-    dispatch(fetchCompaniesThunk(symbol));
-  }, [fetchCompaniesThunk, symbol]);
+    if (!isFetched) {
+      dispatch(fetchCompaniesThunk(symbol));
+    }
+  }, [fetchCompaniesThunk, isFetched]);
 
   return (
     <section className="section bg-pink-900 py-4">

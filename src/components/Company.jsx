@@ -8,13 +8,15 @@ import companiesArray from '../companies/companiesArray';
 function Company() {
   const { symbol } = useParams();
   const { companies } = useSelector((state) => state.companies);
+  const { isFetched } = useSelector((state) => state.companies);
   const symbolSelected = companiesArray.find((company) => company.symbol === symbol);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const symbolToFetch = symbolSelected.symbol;
-    dispatch(fetchCompaniesThunk(symbolToFetch));
-  }, [fetchCompaniesThunk]);
+    if (!isFetched) {
+      dispatch(fetchCompaniesThunk(symbolSelected.symbol));
+    }
+  }, [fetchCompaniesThunk, isFetched]);
 
   return (
     <section className="section bg-pink-900 py-7">
