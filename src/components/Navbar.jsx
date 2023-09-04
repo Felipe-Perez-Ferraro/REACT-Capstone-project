@@ -1,5 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PropTypes from 'prop-types';
 import {
   faMicrophone,
   faAngleLeft,
@@ -14,7 +15,7 @@ const user = <FontAwesomeIcon icon={faMicrophone} />;
 const settings = <FontAwesomeIcon icon={faGear} />;
 const search = <FontAwesomeIcon icon={faMagnifyingGlass} />;
 
-function Navbar() {
+function Navbar({ handleClick }) {
   return (
     <header className="bg-pink-600">
       <nav className={screenStyle}>
@@ -27,7 +28,13 @@ function Navbar() {
             <div className="flex gap-3">
               <p className="text-white text-lg">{user}</p>
               <p className="text-white text-lg">{settings}</p>
-              <p className="text-white text-lg">{search}</p>
+              <button
+                onClick={handleClick}
+                type="button"
+                className="text-white text-lg"
+              >
+                {search}
+              </button>
             </div>
           </li>
         </ul>
@@ -35,5 +42,9 @@ function Navbar() {
     </header>
   );
 }
+
+Navbar.propTypes = {
+  handleClick: PropTypes.func.isRequired,
+};
 
 export default Navbar;
