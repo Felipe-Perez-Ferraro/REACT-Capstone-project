@@ -58,7 +58,7 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-
+- [Project Video Presentation](https://www.loom.com/share/5e678baea051451590069f4a634179f5?sid=98d958c0-a363-4943-97f4-9bffc9237eb5)
 - will be added later
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
