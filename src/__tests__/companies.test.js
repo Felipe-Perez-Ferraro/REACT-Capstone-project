@@ -63,7 +63,7 @@ describe('companiesSlice tests', () => {
     fetchApi.mockResolvedValue(mockData);
     await store.dispatch(fetchCompaniesThunk('symbol'));
 
-    render(
+    const { yearInfo } = render(
       <Provider store={store}>
         <MemoryRouter initialEntries={['/AAPL/2022']}>
           <Routes>
@@ -73,6 +73,7 @@ describe('companiesSlice tests', () => {
       </Provider>,
     );
 
+    expect(yearInfo).toMatchSnapshot();
     expect(screen.getByTestId('costAndExpenses').textContent).toBe(
       'Costs and expenses:',
     );
